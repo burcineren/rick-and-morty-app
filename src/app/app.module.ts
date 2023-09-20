@@ -13,13 +13,14 @@ import { HelloComponent } from './hello.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HelloComponent, 
+    AppComponent, 
   ],
-  imports: [CharactersModule, BrowserModule, FormsModule, HttpClientModule,
+  imports: [
+    BrowserModule,  
+    CharactersModule, 
     RouterModule.forRoot([
       {path: 'characters', component: CharactersComponent},
       {path: 'character-detail', component: CharacterDetailComponent},
-
       {path: '**', redirectTo: "/characters"},
     ])
   ],

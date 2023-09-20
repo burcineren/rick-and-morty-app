@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  getAlbums(){
-    return this.http.get('https://jsonplaceholder.typicode.com/albums');
-  }
+  // getAlbums(){
+  //   return this.http.get('https://jsonplaceholder.typicode.com/albums');
+  // }
 }

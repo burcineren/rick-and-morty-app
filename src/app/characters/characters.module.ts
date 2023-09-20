@@ -4,17 +4,21 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { HelloComponent } from '../hello.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CharactersComponent } from './characters.component';
 
 
 
 @NgModule({
-  declarations: [  CharacterDetailComponent],
+  declarations: [  CharacterDetailComponent,CharactersComponent, HelloComponent, ],
+  providers: [HttpClientModule],
   imports: [
-    CommonModule,
     BrowserModule,
-    FormsModule
-  ,RouterModule
+    FormsModule,
+    RouterModule,
+    HttpClientModule
   ],
-  exports: [CharacterDetailComponent]
+  exports: [CharacterDetailComponent,CharactersComponent]
 })
 export class CharactersModule { }

@@ -1,90 +1,59 @@
-<!-- <p>{{user.status}}</p>
+<div class="container pt-100 mb-5 mt-5">
+  <div class="row">
+    <div class="col-3">
+      <div class="list-group card">
+        <button href="#" class="list-group-item list-group-item-action" routerLink="/"><i class="bi-people"></i> Characters</button>
 
-<div class="" *ngFor="let pet of user">
-	<ul >
-		<li >{{pet.name}}</li>
-		
-	</ul>
-	<img src="{{pet.image}}" alt="" width="100" height="50">
-</div>
- -->
-
- <div class="container">
-	<div class="row" id="search">
-		<form id="search-form" action="" method="POST" enctype="multipart/form-data">
-			<div class="form-group col-xs-9">
-				<input class="form-control" type="text" placeholder="Search" />
-			</div>
-			<div class="form-group col-xs-3">
-				<button type="submit" class="btn btn-block btn-primary">Search</button>
-			</div>
-		</form>
-	</div>
-	<div class="row" id="filter">
-		<form>
-			<div class="form-group col-sm-3 col-xs-6">
-				<select data-filter="make" class="filter-make filter form-control">
-					<option value="">Select Make</option>
-					<option value="">Show All</option>
-				</select>
-			</div>
-			<div class="form-group col-sm-3 col-xs-6">
-				<select data-filter="model" class="filter-model filter form-control">
-					<option value="">Select Model</option>
-					<option value="">Show All</option>
-				</select>
-			</div>
-			<div class="form-group col-sm-3 col-xs-6">
-				<select data-filter="type" class="filter-type filter form-control">
-					<option value="">Select Type</option>
-					<option value="">Show All</option>
-				</select>
-			</div>
-			<div class="form-group col-sm-3 col-xs-6">
-				<select data-filter="price" class="filter-price filter form-control">
-					<option value="">Select Price Range</option>
-					<option value="">Show All</option>
-				</select>
-			</div>
-		</form>
-	</div>
-	<div class="row" id="products">
-		
-	</div>
-</div>
-
- <div class="container pt-100 mb-50">
-    <div class="row">
-      <div class="col-3">
-        <div class="list-group">
-          <button href="#"  class="list-group-item list-group-item-action"> Tüm Kategoriler</button>
-        
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <div class="container">
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto my-1">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-auto my-1">
+                <div class="custom-control custom-checkbox mr-sm-2">
+                  <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                  <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+                </div>
+              </div>
+              <div class="col-auto my-1">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="col-9">
-          <div class="row">
-              <ng-container *ngFor="let characters of character">
-                  <div class="col-md-4">
-                      <div class="card mb-3">
-                          <img src="{{characters.image}}" alt="{{characters.name}}">
-                          <div class="card-body">
-                              
-                                  <h4><a href="#">{{characters.name}}</a></h4>
-                                  <small class="text-muted">
-                                      <i class="fas fa-lira-sign"></i> {{characters.status}}
-                                  </small>
-                                  <small class="text-muted">
-                                      <i class="fas fa-lira-sign"></i> {{characters.species}}
-                                  </small>
-                          </div>
-                          <div class="card-footer text-center">
-                              <button class="btn btn-outline-primary btn-sm" routerLink="/character-detail">Details</button>
-                             
-                          </div>
-                      </div>
-                  </div>
-              </ng-container>
+      <div class="row">
+        <ng-container *ngFor="let characters of character">
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="{{characters.image}}" alt="{{characters.name}}">
+              <div class="card-body">
+
+                <h4>{{characters.name}}</h4>
+                <p class="mb-0">
+                  <strong>Status: </strong>{{characters.status}}
+                </p>
+                <p> <strong>Species: </strong>{{characters.species}}</p>
+                <p> <strong>Gender: </strong>{{characters.gender}}</p>
+              </div>
+              <div class="card-footer text-center w-100">
+                <button class="btn btn-primary btn-sm" routerLink="/character-detail"><i class="bi-arrow-right"></i> <span class="card-detail-btn">Details</span></button>
+              </div>
+            </div>
           </div>
+        </ng-container>
       </div>
     </div>
   </div>
+</div>

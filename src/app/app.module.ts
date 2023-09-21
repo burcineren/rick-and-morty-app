@@ -10,6 +10,7 @@ import { CharacterDetailComponent } from './characters/character-detail/characte
 import { CharactersComponent } from './characters/characters.component';
 import { CharactersModule } from './characters/characters.module';
 import { HelloComponent } from './hello.component';
+import { BaseService } from './model/base.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,17 @@ import { HelloComponent } from './hello.component';
   imports: [
     BrowserModule,  
     CharactersModule, 
+    HttpClientModule,
+
     RouterModule.forRoot([
       {path: 'characters', component: CharactersComponent},
-      {path: 'character-detail', component: CharacterDetailComponent},
+      // {path: 'character-detail', component: CharacterDetailComponent},
+
+      { path: 'character-detail/:id', component: CharacterDetailComponent },
       {path: '**', redirectTo: "/characters"},
     ])
   ],
-  providers: [],
+  providers: [BaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

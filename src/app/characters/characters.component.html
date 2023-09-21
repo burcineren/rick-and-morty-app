@@ -47,9 +47,13 @@
                 <p> <strong>Species: </strong>{{characters.species}}</p>
                 <p> <strong>Gender: </strong>{{characters.gender}}</p>
               </div>
+              <!-- <a [routerLink]="['/character-detail', characters.id]">{{ characters.name }}</a> -->
               <div class="card-footer text-center w-100">
-                <button class="btn btn-primary btn-sm" routerLink="/character-detail"><i class="bi-arrow-right"></i> <span class="card-detail-btn">Details</span></button>
+                <button class="btn btn-primary btn-sm" [routerLink]="['/character-detail',characters.id]"><i class="bi-arrow-right"></i> <span class="card-detail-btn">Details</span></button>
+
+
               </div>
+
             </div>
           </div>
         </ng-container>

@@ -1,21 +1,17 @@
-import { Component, VERSION } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, VERSION } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { BaseService } from "../model/base.service";
 
 @Component({
-  selector: 'characters',
-  templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.css']
+  selector: "characters",
+  templateUrl: "./characters.component.html",
+  styleUrls: ["./characters.component.css"],
 })
-export class CharactersComponent  {
-
-  name = 'Angular ' + VERSION.major;
+export class CharactersComponent {
   character: any;
-
-  constructor(private http: HttpClient) {
-    this.http.get('https://rickandmortyapi.com/api/character').subscribe((res: any) => {
-      this.character = res.results;
-      console.log(this.character);
-    })
+  constructor(private baseService: BaseService) {
+    this.baseService
+      .getCharacter()
+      .subscribe((res: any) => (this.character = res.results));
   }
-
 }

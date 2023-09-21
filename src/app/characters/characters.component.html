@@ -9,33 +9,36 @@
     <div class="col-9">
       <div class="row">
         <div class="container">
-          <form>
-            <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+          <!-- character-list.component.html -->
+          <div class="container">
+            <!-- Filtreleme seçenekleri -->
+			<h5>Filter Characters</h5>
+            <div class="row">
+              
+              <div class="col-md-3">
+                <input [(ngModel)]="filterOptions.name" (input)="filterCharacters()" placeholder="Name">
               </div>
-              <div class="col-auto my-1">
-                <div class="custom-control custom-checkbox mr-sm-2">
-                  <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                  <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
-                </div>
+              <div class="col-md-3">
+                <input [(ngModel)]="filterOptions.species" (input)="filterCharacters()" placeholder="Type">
               </div>
-              <div class="col-auto my-1">
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+              <div class="col-md-3">
+                <input [(ngModel)]="filterOptions.status" (input)="filterCharacters()" placeholder="Status">
+              </div>
+              <div class="col-md-3">
+                <input [(ngModel)]="filterOptions.gender" (input)="filterCharacters()" placeholder="Gender">
               </div>
             </div>
-          </form>
+
+            <!-- Filtrelenmiş karakterlerin listesi -->
+
+          </div>
+
         </div>
       </div>
       <div class="row">
-        <ng-container *ngFor="let characters of character">
-          <div class="col-md-4">
+        <ng-container *ngFor="let characters of filteredCharacters">
+          <div class="col-md-4 mt-5">
             <div class="card mb-3">
               <img src="{{characters.image}}" alt="{{characters.name}}">
               <div class="card-body">

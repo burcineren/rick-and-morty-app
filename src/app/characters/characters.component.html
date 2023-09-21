@@ -9,12 +9,10 @@
     <div class="col-9">
       <div class="row">
         <div class="container">
-          <!-- character-list.component.html -->
           <div class="container">
-            <!-- Filtreleme seçenekleri -->
-			<h5>Filter Characters</h5>
+            <h5>Filter Characters</h5>
             <div class="row">
-              
+
               <div class="col-md-3">
                 <input [(ngModel)]="filterOptions.name" (input)="filterCharacters()" placeholder="Name">
               </div>
@@ -30,7 +28,6 @@
               </div>
             </div>
 
-            <!-- Filtrelenmiş karakterlerin listesi -->
 
           </div>
 
@@ -50,7 +47,6 @@
                 <p> <strong>Species: </strong>{{characters.species}}</p>
                 <p> <strong>Gender: </strong>{{characters.gender}}</p>
               </div>
-              <!-- <a [routerLink]="['/character-detail', characters.id]">{{ characters.name }}</a> -->
               <div class="card-footer text-center w-100">
                 <button class="btn btn-primary btn-sm" [routerLink]="['/character-detail',characters.id]"><i class="bi-arrow-right"></i> <span class="card-detail-btn">Details</span></button>
 

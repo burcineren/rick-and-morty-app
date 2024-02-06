@@ -18,7 +18,6 @@ export class CharactersComponent {
       .subscribe((res: any) => (this.character = res.results));
   }
   filterCharacters(): void {
-    // Filtreleme işlemini gerçekleştirin
     this.filteredCharacters = this.character.filter(character => {
       return (
         character.name.toLowerCase().includes(this.filterOptions.name.toLowerCase()) &&

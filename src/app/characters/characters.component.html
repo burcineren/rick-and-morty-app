@@ -37,15 +37,15 @@
         <ng-container *ngFor="let characters of filteredCharacters">
           <div class="col-md-4 mt-5">
             <div class="card mb-3">
-              <img src="{{characters.image}}" alt="{{characters.name}}">
+              <img src="{{characters?.image}}" alt="{{characters.name}}">
               <div class="card-body">
 
                 <h4>{{characters.name}}</h4>
                 <p class="mb-0">
-                  <strong>Status: </strong>{{characters.status}}
+                  <strong>Status: </strong>{{characters?.status}}
                 </p>
-                <p> <strong>Species: </strong>{{characters.species}}</p>
-                <p> <strong>Gender: </strong>{{characters.gender}}</p>
+                <p> <strong>Species: </strong>{{characters?.species}}</p>
+                <p> <strong>Gender: </strong>{{characters?.gender}}</p>
               </div>
               <div class="card-footer text-center w-100">
                 <button class="btn btn-primary btn-sm" [routerLink]="['/character-detail',characters.id]"><i class="bi-arrow-right"></i> <span class="card-detail-btn">Details</span></button>

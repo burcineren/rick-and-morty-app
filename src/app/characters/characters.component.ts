@@ -6,7 +6,7 @@ import { Character } from "../model/character.model";
 @Component({
   selector: "characters",
   templateUrl: "./characters.component.html",
-  styleUrls: ["./characters.component.css"],
+  styleUrls: ["./characters.component.scss"],
 })
 export class CharactersComponent {
   character:  Character[] = [];
@@ -27,4 +27,5 @@ export class CharactersComponent {
       );
     });
   }
+  
 }

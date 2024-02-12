@@ -41,7 +41,7 @@ body {
 		background: transparent;
 		// border-radius: 10px;
 		// box-sizing: border-box;
-		padding: 30px;
+		// padding: 30px;
 
 		.title {
 			color: #ffffff;
@@ -52,7 +52,7 @@ body {
 		.search-wrapper {
 			// position: relative;
 			display: flex;
-			justify-content: center;
+			// justify-content: center;
 			align-items: center;
 
 			img {
@@ -64,14 +64,13 @@ body {
 			}
 
 			input[type="text"] {
-				width: 450px;
-				height: 70px;
+				height: 52px;
 				background: #262538;
 				border: 1px solid #49485d;
 				border-radius: 10px;
 				margin: 18px 0px;
 				box-sizing: border-box;
-				padding-left: 55px;
+				padding-left: 20px;
 				font-size: 18px;
 				color: #8c8aa7;
 				cursor: text;

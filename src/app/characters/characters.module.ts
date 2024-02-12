@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HelloComponent } from '../hello.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './characters.component';
+import { LayoutModule } from '../layout/layout.module';
 
 
 
@@ -17,7 +18,8 @@ import { CharactersComponent } from './characters.component';
     BrowserModule,
     FormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    LayoutModule
   ],
   exports: [CharacterDetailComponent,CharactersComponent]
 })

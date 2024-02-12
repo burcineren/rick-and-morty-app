@@ -10,6 +10,7 @@ import { CharacterDetailComponent } from './characters/character-detail/characte
 import { CharactersComponent } from './characters/characters.component';
 import { CharactersModule } from './characters/characters.module';
 import { HelloComponent } from './hello.component';
+import { LayoutModule } from './layout/layout.module';
 import { BaseService } from './model/base.service';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { BaseService } from './model/base.service';
     BrowserModule,  
     CharactersModule, 
     HttpClientModule,
+    LayoutModule,
 
     RouterModule.forRoot([
       {path: 'characters', component: CharactersComponent},

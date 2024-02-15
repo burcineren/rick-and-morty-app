@@ -20,6 +20,7 @@ import { BaseService } from './model/base.service';
   imports: [
     BrowserModule,  
     CharactersModule, 
+    LayoutModule,
     HttpClientModule,
     LayoutModule,
 

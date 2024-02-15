@@ -1,4 +1,4 @@
-<div class="app">
+<!-- <div class="app">
   <div class="container">
     <div class="card d-flex flex-wrap co-md-12">
       <div class="title">Rick and Morty</div>
@@ -90,9 +90,9 @@
       </div>
     </div>
   </div>
-</div>
-<div class="container pt-100 mb-5 mt-5">
-  <div class="row">
+</div> -->
+<div class="container  pt-100 mb-5 mt-5">
+  <div class="row col-md-12">
     
     <side-bar></side-bar>
     <div class="col-9">
@@ -102,55 +102,51 @@
             <h5>Filter Characters</h5>
             <div class="row">
               <div class="col-md-3">
-                <input
-                  [(ngModel)]="filterOptions.name"
-                  (input)="filterCharacters()"
-                  placeholder="Name"
-                />
+                <input type="text" placeholder="Name" [(ngModel)]="filterOptions.name" />
               </div>
               <div class="col-md-3">
-                <input
-                  [(ngModel)]="filterOptions.species"
-                  (input)="filterCharacters()"
-                  placeholder="Type"
-                />
-              </div>
-
-              <div class="col-md-3">
-                <input
-                  [(ngModel)]="filterOptions.status"
-                  (input)="filterCharacters()"
-                  placeholder="Status"
-                />
+                <input type="text" placeholder="Species" [(ngModel)]="filterOptions.species" />
               </div>
               <div class="col-md-3">
-                <input
-                  [(ngModel)]="filterOptions.gender"
-                  (input)="filterCharacters()"
-                  placeholder="Gender"
-                />
+                <select class="form-select" [(ngModel)]="filterOptions.status">
+                  <option value="">Select Status</option>
+                  <option *ngFor="let statusOption of statusOptions" [value]="statusOption">{{ statusOption }}</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <input type="text" placeholder="Gender" [(ngModel)]="filterOptions.gender" />
+              </div>
+              <div class="col-md-3">
+                <select class="form-select" [(ngModel)]="filterOptions.gender">
+                  <option value="">Select Gender</option>
+                  <option *ngFor="let genderOption of genderOptions" [value]="genderOption">{{ genderOption }}</option>
+                </select>
+              </div>
+              <div class="col-md-3 mt-2">
+                <button (click)="filterCharacters()">Search</button>
+                <button class="clear-button" (click)="clearFilters()">Clear</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <ng-container *ngFor="let characters of filteredCharacters">
+        <ng-container *ngFor="let character of filteredCharacters">
           <div class="col-md-4 mt-5">
             <div class="card mb-3">
-              <img src="{{ characters?.image }}" alt="{{ characters.name }}" />
+              <img [src]="character?.image" [alt]="character.name" />
               <div class="card-body">
-                <h4>{{ characters.name }}</h4>
+                <h4>{{ character.name }}</h4>
                 <p class="mb-0">
-                  <strong>Status: </strong>{{ characters?.status }}
+                  <strong>Status: </strong>{{ character?.status }}
                 </p>
-                <p><strong>Species: </strong>{{ characters?.species }}</p>
-                <p><strong>Gender: </strong>{{ characters?.gender }}</p>
+                <p><strong>Species: </strong>{{ character?.species }}</p>
+                <p><strong>Gender: </strong>{{ character?.gender }}</p>
               </div>
               <div class="card-footer text-center w-100">
                 <button
                   class="btn btn-primary btn-sm"
-                  [routerLink]="['/character-detail', characters.id]"
+                  [routerLink]="['/character-detail', character.id]"
                 >
                   <i class="bi-arrow-right"></i>
                   <span class="card-detail-btn">Details</span>
@@ -163,3 +159,7 @@
     </div>
   </div>
 </div>
+
+
+
+

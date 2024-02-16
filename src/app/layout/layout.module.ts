@@ -7,10 +7,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 @NgModule({
+  
   imports: [
     BrowserModule,
     CommonModule,
     RouterModule,
-  ], 
+  ],
+
 })
 export class LayoutModule { }

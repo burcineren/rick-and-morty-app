@@ -5,7 +5,7 @@ import { Character } from "src/app/model/character.model";
 @Component({
   selector: "filter",
   templateUrl: "./filter.component.html",
-  styleUrls: ["./filter.component.css"],
+  styleUrls: ["./filter.component.scss"],
 })
 export class FilterComponent {
   characters: Character[] = [];

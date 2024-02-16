@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'character-cards',
   templateUrl: './character-cards.component.html',
   styleUrls: ['./character-cards.component.css']
 })
-export class CharacterCardsComponent implements OnInit {
+export class CharacterCardsComponent  {
 
   constructor() { }
 

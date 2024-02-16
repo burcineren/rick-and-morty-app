@@ -7,8 +7,8 @@ import { ApiService } from './api.service';
 
 import { AppComponent } from './app.component';
 import { CharacterDetailComponent } from './characters/character-detail/character-detail.component';
-import { CharactersComponent } from './characters/characters.component';
 import { CharactersModule } from './characters/characters.module';
+import { HomeComponent } from './characters/home/home.component';
 import { HelloComponent } from './hello.component';
 import { LayoutModule } from './layout/layout.module';
 import { BaseService } from './model/base.service';
@@ -25,7 +25,7 @@ import { BaseService } from './model/base.service';
     LayoutModule,
 
     RouterModule.forRoot([
-      {path: 'characters', component: CharactersComponent},
+      {path: 'characters', component: HomeComponent},
       // {path: 'character-detail', component: CharacterDetailComponent},
 
       { path: 'character-detail/:id', component: CharacterDetailComponent },

@@ -4,15 +4,14 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { HelloComponent } from '../hello.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CharactersComponent } from './characters.component';
 import { LayoutModule } from '../layout/layout.module';
+import { HomeComponent } from './home/home.component';
 
 
 
 @NgModule({
-  declarations: [  CharacterDetailComponent,CharactersComponent, HelloComponent, ],
+  declarations: [  CharacterDetailComponent, HomeComponent, ],
   providers: [HttpClientModule],
   imports: [
     BrowserModule,
@@ -21,6 +20,6 @@ import { LayoutModule } from '../layout/layout.module';
     HttpClientModule,
     LayoutModule
   ],
-  exports: [CharacterDetailComponent,CharactersComponent]
+  exports: [CharacterDetailComponent,HomeComponent]
 })
 export class CharactersModule { }

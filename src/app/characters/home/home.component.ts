@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 import { BaseService } from 'src/app/model/base.service';
 import { Character } from 'src/app/model/character.model';
 
 @Component({
-  selector: 'filter',
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class FilterComponent  {
+export class HomeComponent {
+
   characters: Character[] = [];
   filteredCharacters: Character[] = [];
   filterOptions = { name: "", species: "", status: "", gender: "" };

@@ -9,6 +9,7 @@ import { LayoutModule } from "../layout/layout.module";
 import { HomeComponent } from "./home/home.component";
 import { FilterComponent } from "../layout/filter/filter.component";
 import { SideBarComponent } from "../layout/side-bar/side-bar.component";
+import { CharacterCardsComponent } from "../layout/character-cards/character-cards.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SideBarComponent } from "../layout/side-bar/side-bar.component";
     HomeComponent,
     FilterComponent,
     SideBarComponent,
+    CharacterCardsComponent
   ],
 
   imports: [BrowserModule, FormsModule, RouterModule, HttpClientModule],

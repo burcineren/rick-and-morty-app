@@ -6,13 +6,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { CharacterCardsComponent } from './character-cards/character-cards.component';
 @NgModule({
-  
+  declarations: [
+    CharacterCardsComponent,
+  ],
   imports: [
     BrowserModule,
     CommonModule,
     RouterModule,
   ],
-
+  exports:[CharacterCardsComponent]
 })
 export class LayoutModule { }

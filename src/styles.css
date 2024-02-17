@@ -14,12 +14,17 @@ h4,
 h5,
 h6 {
   color: rgb(255, 255, 255);
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
 }
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1260px;
   }
+}
+.btn-primary {
+    color: #fff;
+    background-color: #6466f1 !important;
+    border-color: #6466f1 !important;
 }

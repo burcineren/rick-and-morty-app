@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,900&display=swap");
 body {
   background-color: hsl(0, 0%, 30%);
@@ -7,9 +8,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 700;
+  font-weight: 500;
 }
-
+p{
+    font-size: .9rem;
+}
 a {
   color: var(--light);
   &:hover {
@@ -19,6 +22,7 @@ a {
 h5 {
   font-size: 1.1rem;
 }
+
 .card {
   border: 0px;
   border-radius: 0.5rem;
@@ -26,12 +30,11 @@ h5 {
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
     box-shadow 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   will-change: transform, box-shadow;
-  box-shadow: 23px 21px 43px -17px rgba(0, 0, 0, 0.6);
   margin-bottom: 1rem;
   background-color: #171723eb;
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 23px 21px 43px -17px rgba(0, 0, 0, 0.75);
+    border: 1px solid rgb(206 212 218 / 15%);
   }
   .card-title {
     margin-top: 0;
@@ -50,4 +53,25 @@ h5 {
     color: var(--secondary);
     padding-bottom: 1.25rem;
   }
+}
+input {
+    background-color: transparent;
+    color: #c4c4c4;
+    width: 100%;
+}
+.form-control{
+    border: 1px solid #ced4da7d;
+}
+.form-control:focus {
+    color: #ffffffcf;
+    background-color: transparent;
+    border-color: #ffffffcf;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
+}
+.custom-select{
+    border: 1px solid #ced4da7d;
+    background-color: transparent;
+    color: #c4c4c4;
+    width: 100%;
 }

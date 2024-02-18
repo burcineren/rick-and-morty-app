@@ -17,7 +17,7 @@ import { CharacterCardsComponent } from "../layout/character-cards/character-car
     HomeComponent,
     FilterComponent,
     SideBarComponent,
-    CharacterCardsComponent
+    // CharacterCardsComponent
   ],
 
   imports: [BrowserModule, FormsModule, RouterModule, HttpClientModule],

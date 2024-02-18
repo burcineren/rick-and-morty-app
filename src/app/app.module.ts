@@ -8,7 +8,6 @@ import { AppComponent } from "./app.component";
 import { CharacterDetailComponent } from "./pages/character-detail/character-detail.component";
 import { CharactersModule } from "./pages/characters.module";
 import { HomeComponent } from "./pages/home/home.component";
-import { HelloComponent } from "./hello.component";
 import { LayoutModule } from "./layout/layout.module";
 import { BaseService } from "./model/base.service";
 

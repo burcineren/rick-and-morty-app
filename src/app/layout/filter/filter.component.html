@@ -4,7 +4,7 @@
       <div class="pr-0 pl-0 mr-2 mt-2">
         <h6><strong>Filter Characters:</strong></h6>
       </div>
-      <div class="pr-0 pl-0 mr-2">
+      <div class="pr-0 pl-0 mr-2 mb-2">
         <input
           class="form-control"
           type="text"
@@ -12,7 +12,7 @@
           [(ngModel)]="filterOptions.name"
         />
       </div>
-      <div class="mr-2">
+      <div class="mr-2 mb-2">
         <input
           class="form-control"
           type="text"
@@ -20,7 +20,7 @@
           [(ngModel)]="filterOptions.species"
         />
       </div>
-      <div class="col-md-2 pr-0 pl-0 mr-2">
+      <div class="col-md-2 pr-0 pl-0 mr-2 mb-2">
         <select class="custom-select" [(ngModel)]="filterOptions.status">
           <option value="">Status</option>
           <option
@@ -31,7 +31,7 @@
           </option>
         </select>
       </div>
-      <div class="col-md-1 pr-0 pl-0 mr-2">
+      <div class="col-md-1 pr-0 pl-0 mr-2 mb-2">
         <select class="custom-select" [(ngModel)]="filterOptions.gender">
           <option value="">Gender</option>
           <option
@@ -47,7 +47,7 @@
           Search
         </button>
         <button
-          class="clear-button"
+          class="clear-button mb-2"
           (click)="clearFilters()"
           class="btn btn-danger ml-2"
         >

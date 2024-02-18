@@ -1,29 +1,42 @@
 <div class="container pt-100 mb-5 mt-5">
   <div class="row">
-    <side-bar></side-bar>
-    <div class="col-9">
-      <div class="row">
+    <div class="col-md-2"><side-bar></side-bar></div>
+    <div class="col-md-10">
+      <div class="mt-4">
         <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h6 class="featurette-heading">{{character.name}}</h6>
-            <p><strong>Status: </strong>{{character.status}} <br>
-              <strong>Species: </strong>{{character.species}}<br>
-              <strong>Gender: </strong>{{character.gender}} <br>
-              <strong>Type: </strong>{{character.type}} <br>
-              <strong>Origin Name: </strong> <a href="{{character.origin.url}}" target="_blank">{{character.origin.name}}</a> <br>
-              <strong>Location Name: </strong> <a href="{{character.location.url}}" target="_blank">{{character.location.name}}</a> <br>
-              <strong>Episode: </strong> <br>
-
-              <strong>Url: </strong> <a href="{{character.url}}" target="_blank">Link</a> <br>
-              <strong>Created Time: </strong>{{character.created}}<br>
-
-            </p>
-            <div class="d-flex" *ngFor="let episode of character.episode">
-              <a href="{{episode}}" target="_blank">Episode Link</a> <br>
-            </div>
-          </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" src="{{character.image}}" alt="{{character.name}}" data-holder-rendered="true" style="width: 500px; height: auto;">
+            <img
+              class="featurette-image img-fluid mx-auto"
+              data-src="holder.js/500x500/auto"
+              src="{{ character.image }}"
+              alt="{{ character.name }}"
+              data-holder-rendered="true"
+              style="width: 500px; height: auto"
+            />
+          </div>
+          <div class="col-md-5 order-md-2 mt-4">
+            <h5 class="featurette-heading">{{ character.name }}</h5>
+            <p><strong>Status: </strong>{{ character.status }}</p>
+            <p><strong>Species: </strong>{{ character.species }}</p>
+            <p><strong>Gender: </strong>{{ character.gender }}</p>
+            <p><strong>Type: </strong>{{ character.type }}</p>
+            <p><strong>Origin Name: </strong> {{ character.origin.name }}</p>
+            <p>
+              <strong>Location Name: </strong> {{ character.location.name }}
+            </p>
+
+            <p>
+              <strong>Created Time: </strong
+              >{{ character.created | date : "yyyy-MM-dd" }}
+            </p>
+            <p><strong>Episode: </strong></p>
+            <div class="row d-flex mt-2">
+              <div *ngFor="let episode of character.episode; let i = index">
+                <a href="{{ episode }}" target="_blank" class="episode-button"
+                  >Ep {{ i + 1 }}</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>

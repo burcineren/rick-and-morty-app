@@ -15,7 +15,7 @@ h5,
 h6 {
   color: rgb(255, 255, 255);
   font-family: "Inter", sans-serif;
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 
 @media (min-width: 1200px) {
@@ -27,4 +27,7 @@ h6 {
     color: #fff;
     background-color: #6466f1 !important;
     border-color: #6466f1 !important;
+}
+.sidebar-area{
+  border-right: 1px solid rgb(59 61 63 / 49%);
 }

@@ -2,7 +2,6 @@ import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, VERSION } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { BaseService } from "src/app/model/base.service";
-import * as moment from 'moment';
 
 @Component({
   selector: "character-detail",

@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,900&display=swap");
 body {
   background-color: hsl(0, 0%, 30%);
@@ -9,9 +8,10 @@ h3,
 h4,
 h5 {
   font-weight: 500;
+  font-size: 1.4rem;
 }
-p{
-    font-size: .9rem;
+p {
+  font-size: 0.9rem;
 }
 a {
   color: var(--light);
@@ -40,6 +40,11 @@ h5 {
     margin-top: 0;
     margin-bottom: 0;
   }
+  .card-detail-btn {
+    width: 160px;
+    height: 35px;
+  }
+
   .card-body {
     overflow: hidden;
     padding-top: 1rem;
@@ -55,23 +60,23 @@ h5 {
   }
 }
 input {
-    background-color: transparent;
-    color: #c4c4c4;
-    width: 100%;
+  background-color: transparent;
+  color: #c4c4c4;
+  width: 100%;
 }
-.form-control{
-    border: 1px solid #ced4da7d;
+.form-control {
+  border: 1px solid #ced4da7d;
 }
 .form-control:focus {
-    color: #ffffffcf;
-    background-color: transparent;
-    border-color: #ffffffcf;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
+  color: #ffffffcf;
+  background-color: transparent;
+  border-color: #ffffffcf;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
 }
-.custom-select{
-    border: 1px solid #ced4da7d;
-    background-color: transparent;
-    color: #c4c4c4;
-    width: 100%;
+.custom-select {
+  border: 1px solid #ced4da7d;
+  background-color: transparent;
+  color: #c4c4c4;
+  width: 100%;
 }

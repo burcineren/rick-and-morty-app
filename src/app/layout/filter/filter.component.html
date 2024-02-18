@@ -67,15 +67,15 @@
         <div class="card-body">
           <h4>{{ character.name }}</h4>
           <p class="mb-0"><strong>Status: </strong>{{ character?.status }}</p>
-          <p><strong>Species: </strong>{{ character?.species }}</p>
-          <p><strong>Gender: </strong>{{ character?.gender }}</p>
+          <p class="mb-0"><strong>Species: </strong>{{ character?.species }}</p>
+          <p class="mb-0"><strong>Gender: </strong>{{ character?.gender }}</p>
         </div>
         <div class="card-footer text-center w-100">
           <button
-            class="btn btn-primary btn-sm"
+            class="btn btn-primary btn-sm card-detail-btn"
             [routerLink]="['/character-detail', character.id]"
           >
-            <i class="bi-arrow-right"></i>
+           
             <span class="card-detail-btn">Details</span>
           </button>
         </div>

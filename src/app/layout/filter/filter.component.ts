@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { BaseService } from "src/app/model/base.service";
-import { Character } from "src/app/model/character.model";
+import { BaseService } from "src/app/core/characters/characters.service";
+import { Character } from "src/app/core/characters/characters.model";
 
 @Component({
   selector: "filter",

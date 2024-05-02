@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit, VERSION } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { BaseService } from "src/app/model/base.service";
+import { BaseService } from "src/app/core/characters/characters.service";
 
 @Component({
   selector: "character-detail",
@@ -16,11 +16,8 @@ export class CharacterDetailComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      const characterId = +params["id"]; // Karakter ID'sini alın
-
-      // Karakter detaylarını API'den çekin
+      const characterId = +params["id"]; 
       this.baseService.getCharacterById(characterId).subscribe((character) => {
-        // Karakter detaylarını kullanın
         this.character = character;
         console.log(character);
       });

@@ -9,7 +9,7 @@ import { CharacterDetailComponent } from "./pages/character-detail/character-det
 import { CharactersModule } from "./pages/characters.module";
 import { HomeComponent } from "./pages/home/home.component";
 import { LayoutModule } from "./layout/layout.module";
-import { BaseService } from "./model/base.service";
+import { BaseService } from "./core/characters/characters.service";
 
 @NgModule({
   declarations: [AppComponent],
